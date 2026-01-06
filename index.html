@@ -5,9 +5,11 @@
     <style>
         body {
             margin: 0;
-            background-color:rgb(134, 230, 217);
+            background-color: rgb(134, 230, 217);
             font-family: Arial, sans-serif;
         }
+
+        /* NAVBAR */
         .navbar {
             display: flex;
             align-items: center;
@@ -37,39 +39,230 @@
             padding: 0 14px;
             font-weight: 500;
         }
-       
 
         button:hover {
             background-color: rgb(37, 99, 235);
             color: white;
         }
+
+        section {
+            background-color: white;
+            margin: 30px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        table {
+            margin: 30px auto;
+            background-color: white;
+            border-collapse: collapse;
+        }
+
+        table td {
+            padding: 10px;
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo">Skill Bridge</div>
 
-        <div class="nav-buttons">
-            <button>Home</button>
-            <button>Courses</button>
-            <button>Categories</button>
-            <button>About</button>
-            <button>Contact</button>
-            <button>Log In</button>
-        </div>
-    </nav>
-    <div class = "image">
-        <img src = "C:\Users\TEJA\OneDrive\Desktop\WT_LABS\home_page.jpg" >
-        
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Skill Bridge</div>
+    <div class="nav-buttons">
+        <button>Home</button>
+        <button>Courses</button>
+        <button>Categories</button>
+        <button>About</button>
+        <button>Contact</button>
+        <button>Log In</button>
     </div>
-    <section class="hero-content">
+</nav>
+
+<!-- IMAGE -->
+<img src="home_page.jpg" alt="Online Learning">
+
+<!-- HERO -->
+<section>
     <h1>Learn Skills for the Future</h1>
     <p>SkillBridge helps you learn industry-ready skills from expert instructors.</p>
-    <button class="btn-primary">Get Started</button>
-    <button class="btn-secondary">View Courses</button>
+    <button onclick="addCourse()">Add Course</button>
 </section>
-<a href = 'https://www.youtube.com'>youtube</a>
-<video src = "C:\Users\TEJA\OneDrive\Desktop\WT_LABS\00004.mp4" width="320" height="240" autoplay> </video>
+
+<!-- VARIABLES -->
+<section>
+    <h2>Platform Information</h2>
+    <p id="platformName"></p>
+    <p id="courseCount"></p>
+    <p id="status"></p>
+</section>
+
+<!-- FUNCTIONS -->
+<section>
+    <h2>Functions Demo</h2>
+    <h3 id="welcomeMsg">Welcome to SkillBridge</h3>
+    <button onclick="changeMessage()">Change Message</button>
+    <button onclick="showTotal(2,3)">Show Total Value</button>
+</section>
+
+<!-- OBJECTS -->
+<section>
+    <h2>Course Object</h2>
+    <p id="courseInfo"></p>
+    <button onclick="updatePrice()">Update Price</button>
+</section>
+
+<!-- METHODS -->
+<section>
+    <h2>Course Availability</h2>
+    <p id="availability"></p>
+    <button onclick="courseDetails.toggleStatus()">Toggle Availability</button>
+</section>
+
+<!-- POP-UPS -->
+<section>
+    <h2>Pop-up Interaction</h2>
+    <button onclick="userActions()">Enroll</button>
+    <p id="userResponse"></p>
+</section>
+
+<!-- EVENTS -->
+<section>
+    <h2>Events Demo</h2>
+    <h3 id="hoverText">Hover over me</h3>
+    <input type="text" id="nameInput" placeholder="Type your name">
+    <p id="liveOutput"></p>
+</section>
+
+<!-- TABLE 1 -->
+<table border="1">
+    <caption><b>Courses Details</b></caption>
+    <tr>
+        <td><b>Course</b></td>
+        <td><b>Tutor</b></td>
+        <td><b>Price</b></td>
+    </tr>
+    <tr>
+        <td>JavaScript</td>
+        <td>Teja</td>
+        <td>3999</td>
+    </tr>
+    <tr>
+        <td>Python</td>
+        <td>Sreeraj</td>
+        <td>2999</td>
+    </tr>
+</table>
+
+<!-- TABLE 2 -->
+<table border="1">
+    <caption><b>Student Dashboard</b></caption>
+    <tr>
+        <th>Course</th>
+        <th>Progress</th>
+        <th><b>Status</th>
+    </tr>
+    <tr>
+        <td>Web Development</td>
+        <td>55%</td>
+        <td>Ongoing</td>
+    </tr>
+    <tr>
+        <td>Python Basics</td>
+        <td>100%</td>
+        <td>Completed</td>
+    </tr>
+</table>
+
+<!-- JAVASCRIPT -->
+<script>
+    // VARIABLES
+    const platform = "Skill Bridge";
+    const platformStatus = "Active";
+    let totalCourses = 5;
+
+    document.getElementById("platformName").innerText = "Platform: " + platform;
+    document.getElementById("courseCount").innerText = "Total Courses: " + totalCourses;
+    document.getElementById("status").innerText = "Status: " + platformStatus;
+
+    function addCourse() {
+        totalCourses++;
+        document.getElementById("courseCount").innerText =
+            "Total Courses: " + totalCourses;
+    }
+
+    try {
+        platform = "New SkillBridge";
+    } catch (e) {
+        console.log("Const reassignment error:", e.message);
+    }
+
+    // FUNCTIONS
+    function changeMessage() {
+        document.getElementById("welcomeMsg").innerText = "Learn Anytime, Anywhere!";
+    }
+
+    const multiply = function(a, b) {
+        return a * b;
+    };
+
+    const showTotal = (x, y) => {
+        alert("Returned value: " + multiply(x, y));
+    };
+
+    // OBJECT
+    const course = {
+        name: "Web Development",
+        duration: "8 Weeks",
+        price: 1999
+    };
+
+    document.getElementById("courseInfo").innerText =
+        course.name + " | " + course.duration + " | ₹" + course.price;
+
+    function updatePrice() {
+        course.price = 2999;
+        document.getElementById("courseInfo").innerText =
+            course.name + " | " + course.duration + " | ₹" + course.price;
+    }
+
+    // METHODS
+    const courseDetails = {
+        available: true,
+        toggleStatus: function() {
+            this.available = !this.available;
+            document.getElementById("availability").innerText =
+                "Available: " + this.available;
+        }
+    };
+
+    document.getElementById("availability").innerText =
+        "Available: " + courseDetails.available;
+
+    // POP-UPS
+    function userActions() {
+        alert("Welcome to SkillBridge!");
+        let ok = confirm("Do you want to enroll?");
+        if (ok) {
+            let name = prompt("Enter your name:");
+            document.getElementById("userResponse").innerText =
+                "Enrolled User: " + name;
+        } else {
+            document.getElementById("userResponse").innerText =
+                "Enrollment Cancelled";
+        }
+    }
+
+    // EVENTS
+    document.getElementById("hoverText").addEventListener("mouseover", function() {
+        this.style.color = "blue";
+    });
+
+    document.getElementById("nameInput").addEventListener("input", function() {
+        document.getElementById("liveOutput").innerText =
+            "Hello " + this.value;
+    });
+</script>
+
 </body>
 </html>
