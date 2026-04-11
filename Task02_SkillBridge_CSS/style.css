@@ -1,0 +1,553 @@
+/* ============================================================================
+   SKILL BRIDGE - CSS STYLING
+   Lab Task 2: Advanced CSS Concepts
+   ============================================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* ============================================================================
+   NAVIGATION BAR - Fixed Positioning
+   ============================================================================ */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #2c3e50;
+    padding: 12px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #3498db;
+}
+
+.login-btn {
+    padding: 8px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background: #2980b9;
+}
+
+/* ============================================================================
+   HERO SECTION - Flexbox Layout
+   ============================================================================ */
+
+.hero {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.btn-hero {
+    display: inline-block;
+    background: #ffd700;
+    color: #333;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-hero:hover {
+    background: #ffed4e;
+}
+
+.hero img {
+    flex: 1;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================================================
+   MAIN CONTAINER - Grid Layout with Sidebar
+   ============================================================================ */
+
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ============================================================================
+   SIDEBAR - Sticky Positioning
+   ============================================================================ */
+
+.sidebar {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul a {
+    color: #555;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.sidebar ul a:hover {
+    background: #f0f0f0;
+    color: #3498db;
+    padding-left: 18px;
+}
+
+/* ============================================================================
+   FORMS SECTION
+   ============================================================================ */
+
+.form-box {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.form-box h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-row > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Form Labels and Inputs */
+.form label {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.form input,
+.form select,
+.form textarea {
+    padding: 10px 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s;
+    background: #f9f9f9;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form input:hover,
+.form select:hover,
+.form textarea:hover {
+    border-color: #3498db;
+}
+
+.form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form input[type="checkbox"],
+.form input[type="radio"] {
+    width: auto;
+    accent-color: #3498db;
+}
+
+/* Form Buttons */
+.btn-submit {
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    align-self: flex-start;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* ============================================================================
+   COURSES SECTION - CSS Grid
+   ============================================================================ */
+
+.courses {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+.courses h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.course-card {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.course-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.course-card .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 12px;
+    background: #3498db;
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.course-card .badge.intermediate {
+    background: #f39c12;
+}
+
+.course-card .badge.advanced {
+    background: #e74c3c;
+}
+
+.course-card h3 {
+    padding: 15px 15px 5px;
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+.course-card p {
+    padding: 0 15px 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.course-card .btn-enroll {
+    width: calc(100% - 30px);
+    margin: 10px 15px;
+    padding: 8px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.course-card .btn-enroll:hover {
+    background: #2980b9;
+}
+
+/* ============================================================================
+   FOOTER
+   ============================================================================ */
+
+.footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+.footer p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+/* ============================================================================
+   RESPONSIVE DESIGN - Media Queries
+   ============================================================================ */
+
+/* Tablet - 768px and below */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* Mobile - 480px and below */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 8px 0;
+    }
+
+    .nav-container {
+        padding: 0 10px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-menu {
+        width: 100%;
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .login-btn {
+        width: 100%;
+        padding: 6px;
+    }
+
+    .hero {
+        margin-top: 50px;
+        padding: 20px 15px;
+        gap: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .btn-hero {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+
+    .container {
+        padding: 0 10px;
+        margin: 20px auto;
+    }
+
+    .sidebar {
+        padding: 15px;
+    }
+
+    .form-box {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .form-box h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .form input,
+    .form select,
+    .form textarea {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .btn-submit {
+        padding: 10px 20px;
+        font-size: 13px;
+        width: 100%;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .courses {
+        padding: 15px;
+    }
+
+    .footer {
+        padding: 20px 10px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+}

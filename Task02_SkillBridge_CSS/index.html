@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Bridge - Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Fixed Navigation Bar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">Skill Bridge</div>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <button class="login-btn">Login</button>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero" id="home">
+    <div class="hero-content">
+        <h1>Learn Online Courses</h1>
+        <p>Expand your skills and knowledge</p>
+        <a href="#courses" class="btn-hero">Start Now</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&fit=crop" alt="Learning">
+</header>
+
+<!-- Main Content with Sidebar -->
+<div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h3>Categories</h3>
+        <ul>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Mobile Apps</a></li>
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Databases</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Search Form -->
+        <section class="form-box" id="forms">
+            <h2>Search Courses</h2>
+            <form class="form">
+                <div class="form-row">
+                    <input type="text" placeholder="Search courses...">
+                    <select>
+                        <option>All Levels</option>
+                        <option>Beginner</option>
+                        <option>Intermediate</option>
+                        <option>Advanced</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label><input type="checkbox"> Free Courses</label>
+                    <label><input type="checkbox"> Certified</label>
+                </div>
+                <button type="submit" class="btn-submit">Search</button>
+            </form>
+        </section>
+
+        <!-- Courses Grid -->
+        <section class="courses" id="courses">
+            <h2>Featured Courses</h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300&fit=crop" alt="Course">
+                    <h3>HTML & CSS</h3>
+                    <p>Learn web design basics</p>
+                    <span class="badge">Beginner</span>
+                    <button class="btn-enroll">Enroll</button>
+                </div>
+                <div class="course-card">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300&fit=crop" alt="Course">
+                    <h3>JavaScript</h3>
+                    <p>Master web development</p>
+                    <span class="badge intermediate">Intermediate</span>
+                    <button class="btn-enroll">Enroll</button>
+                </div>
+                <div class="course-card">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300&fit=crop" alt="Course">
+                    <h3>Java Programming</h3>
+                    <p>Advanced OOP concepts</p>
+                    <span class="badge advanced">Advanced</span>
+                    <button class="btn-enroll">Enroll</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enrollment Form -->
+        <section class="form-box">
+            <h2>Enroll in Course</h2>
+            <form class="form">
+                <div class="form-row">
+                    <div>
+                        <label>Select Course*</label>
+                        <select required>
+                            <option>HTML & CSS</option>
+                            <option>JavaScript</option>
+                            <option>Java</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Start Date*</label>
+                        <input type="date" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label>Schedule*</label>
+                        <select required>
+                            <option>Flexible</option>
+                            <option>10 hrs/week</option>
+                            <option>20 hrs/week</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Learning Goal*</label>
+                        <select required>
+                            <option>Career Change</option>
+                            <option>Skill Upgrade</option>
+                            <option>Hobby</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label>Additional Notes</label>
+                    <textarea placeholder="Your comments..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enroll</button>
+            </form>
+        </section>
+
+        <!-- Profile Form -->
+        <section class="form-box">
+            <h2>Update Profile</h2>
+            <form class="form">
+                <div class="form-row">
+                    <div>
+                        <label>First Name*</label>
+                        <input type="text" placeholder="Your name" required>
+                    </div>
+                    <div>
+                        <label>Last Name*</label>
+                        <input type="text" placeholder="Your surname" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label>Email*</label>
+                        <input type="email" placeholder="your@email.com" required>
+                    </div>
+                    <div>
+                        <label>Phone</label>
+                        <input type="tel" placeholder="+1234567890">
+                    </div>
+                </div>
+                <div>
+                    <label>Bio</label>
+                    <textarea placeholder="Tell us about yourself..."></textarea>
+                </div>
+                <div>
+                    <label><input type="checkbox" checked> Email notifications</label>
+                    <label><input type="checkbox"> Weekly updates</label>
+                </div>
+                <button type="submit" class="btn-submit">Save</button>
+            </form>
+        </section>
+
+        <!-- Review Form -->
+        <section class="form-box">
+            <h2>Leave a Review</h2>
+            <form class="form">
+                <div class="form-row">
+                    <div>
+                        <label>Course*</label>
+                        <select required>
+                            <option>HTML & CSS</option>
+                            <option>JavaScript</option>
+                            <option>Java</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Rating*</label>
+                        <select required>
+                            <option>5 - Excellent</option>
+                            <option>4 - Good</option>
+                            <option>3 - Average</option>
+                            <option>2 - Poor</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label>Review Title*</label>
+                    <input type="text" placeholder="Summary of your experience" required>
+                </div>
+                <div>
+                    <label>Your Review*</label>
+                    <textarea placeholder="Share your feedback..." required></textarea>
+                </div>
+                <div>
+                    <label><input type="checkbox"> Instructor quality</label>
+                    <label><input type="checkbox"> Course content</label>
+                    <label><input type="checkbox"> Hands-on projects</label>
+                </div>
+                <button type="submit" class="btn-submit">Submit Review</button>
+            </form>
+        </section>
+
+    </main>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2026 Skill Bridge Learning Platform</p>
+    <p>Contact: info@skillbridge.com</p>
+</footer>
+
+</body>
+</html>
